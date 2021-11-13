@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pix/limite_pix.dart';
+import 'package:flutter_pix/minhas_chaves.dart';
 
 class Area extends StatefulWidget {
   const Area({ Key? key }) : super(key: key);
@@ -94,7 +95,11 @@ class _AreaState extends State<Area> {
                  ),
                ),   
                InkWell(
-                 onTap: (){},
+                 onTap: (){
+                   Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Chaves()),
+                      );
+                 },
                  child: Container(
                    color: Colors.white70,
                    alignment: Alignment.topLeft,

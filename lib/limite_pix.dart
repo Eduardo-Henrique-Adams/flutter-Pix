@@ -110,6 +110,7 @@ class _LimitePixState extends State<LimitePix> {
                        height: 290,
                       child: Column(
                         children: [
+                          
                           Container(
                             height: 60,
                             width: MediaQuery.of(context).size.width,

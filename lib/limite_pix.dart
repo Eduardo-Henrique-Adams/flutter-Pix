@@ -31,7 +31,7 @@ class _LimitePixState extends State<LimitePix> {
           
        Padding(
             padding: const EdgeInsets.only(top: 15, bottom: 0,left: 40, right: 0),
-            child: Text('Digite um valor',style: TextStyle(color: Colors.blue.shade500,fontSize: 22))
+            child: Text('Digite um valor',style: TextStyle(color: Colors.blue.shade500,fontSize: 20))
           ),
         Container(
           child: Padding(
@@ -99,7 +99,7 @@ class _LimitePixState extends State<LimitePix> {
         ),
         
            Padding(
-             padding: const EdgeInsets.only(top: 238.4, bottom: 0,left: 0, right: 0),
+             padding: const EdgeInsets.only(top: 241.4, bottom: 0,left: 0, right: 0),
              child: Container(
                 height: 65,
                 width: MediaQuery.of(context).size.width,
@@ -138,9 +138,7 @@ class _LimitePixState extends State<LimitePix> {
                               height: 65,
                               width: MediaQuery.of(context).size.width,
                               child: RaisedButton(onPressed: (){
-                                 Navigator.of(context).push(
-                                  MaterialPageRoute(builder: (context) => Area()),
-                                );
+                               Navigator.pop(context);
                               },
                               child: Text('Confirmar',style: TextStyle(color: Colors.white,fontSize: 18),),
                               color: Colors. indigo.shade900,

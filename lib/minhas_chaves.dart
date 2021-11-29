@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pix/CPF.dart';
+import 'package:flutter_pix/celular.dart';
+import 'package:flutter_pix/email.dart';
 
 class Chaves extends StatefulWidget {
   const Chaves({ Key? key }) : super(key: key);
@@ -582,7 +585,11 @@ class _ChavesState extends State<Chaves> {
                                    width:MediaQuery.of(context).size.width,
                                   height: 40,
                                     child: InkWell(
-                                      onTap: (){},
+                                      onTap: (){
+                                        Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => NumCelular()),
+                                );
+                                      },
                                       child: Row(
                                         children: [
                                     
@@ -605,7 +612,11 @@ class _ChavesState extends State<Chaves> {
                             width:MediaQuery.of(context).size.width,
                             height: 40,
                             child: InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => CPF()),
+                                );
+                              },
                               child: Row(
                                 children: [
                                    Padding(
@@ -625,7 +636,11 @@ class _ChavesState extends State<Chaves> {
                             width:MediaQuery.of(context).size.width,
                             height: 40,
                             child: InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => CPF()),
+                                );
+                                },
                               child: Row(
                                 children: [
                                    Padding(
@@ -646,7 +661,11 @@ class _ChavesState extends State<Chaves> {
                               width:MediaQuery.of(context).size.width,
                               height: 40,
                               child: InkWell(
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => Email()),
+                                );
+                                },
                                 child: Row(
                                   children: [
                                      Padding(

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:flutter_pix/copia_e_cola.dart';
 import 'package:flutter_pix/limite_pix.dart';
 import 'package:flutter_pix/minhas_chaves.dart';
+import 'package:flutter_pix/qr_code.dart';
+import 'package:flutter_pix/transferir.dart';
 
 class Area extends StatefulWidget {
   const Area({ Key? key }) : super(key: key);
@@ -10,11 +14,21 @@ class Area extends StatefulWidget {
 }
 
 class _AreaState extends State<Area> {
+
+  readQRCode() async {
+  String code = await FlutterBarcodeScanner.scanBarcode(
+    "#FFFFFF",
+    "Cancelar",
+    false,
+    ScanMode.QR,
+  );
+  
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        backgroundColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue,
         title: Text('Área Pix'),
       ),
     body:Padding(
@@ -25,12 +39,16 @@ class _AreaState extends State<Area> {
           Container(  
             height: 160,
             width: MediaQuery.of(context).size.width,
-            color: Colors.blue.shade700,            
+            color: Colors.blue,            
             child: Row(   
               mainAxisAlignment: MainAxisAlignment.spaceBetween,    
               children: [  
                 InkWell(            
-                  onTap: (){},     
+                  onTap: (){
+                    Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Transferir()),
+                    );
+                  },     
                  child: Padding(
                    padding: const EdgeInsets.only(top: 35, bottom: 0,right: 25,left: 25),
                        child:Column(   
@@ -49,7 +67,11 @@ class _AreaState extends State<Area> {
                   Padding(
                     padding: const EdgeInsets.only(top: 35, bottom: 0,),
                     child: InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => CopiaCola()),
+                                );
+                    },
                      child: Row(
                        children: [
                              Column(   
@@ -61,7 +83,7 @@ class _AreaState extends State<Area> {
                                ] 
                              ),
                              InkWell(
-                    onTap: (){},
+                    onTap: readQRCode,
                  child: Padding(
                      padding: const EdgeInsets.only(top: 0, bottom: 10,right: 30,left: 50),   
                            child: Column(   

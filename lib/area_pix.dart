@@ -3,7 +3,7 @@ import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_pix/copia_e_cola.dart';
 import 'package:flutter_pix/limite_pix.dart';
 import 'package:flutter_pix/minhas_chaves.dart';
-import 'package:flutter_pix/qr_code.dart';
+
 import 'package:flutter_pix/transferir.dart';
 
 class Area extends StatefulWidget {
